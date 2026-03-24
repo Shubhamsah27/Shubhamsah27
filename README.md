@@ -13,7 +13,6 @@ I am fascinated by how computer technology 🌐 has brought changes to our lives
  <img src="https://komarev.com/ghpvc/?username=shubhamsah27&label=Profile%20views&color=0e75b6&style=flat" /> 
 </p>
 
-<!-- Coding GIF -->
 <img align="right" width="400" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif">
 
 <br><br>
@@ -81,3 +80,13 @@ I am fascinated by how computer technology 🌐 has brought changes to our lives
 <img src="https://img.icons8.com/?size=100&id=lU3pGcIShiCE&format=png&color=000000" height="40" />
 </a>
 </p>
+
+<hr/>
+
+<h2 align="center">🐍 My Contributions 🐍</h2>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Shubhamsah27/Shubhamsah27/output/github-contribution-grid-snake.svg" />
+</div>
+
+<br/>
