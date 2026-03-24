@@ -26,10 +26,11 @@ I’m a 3rd-year B.Tech student in Computer Science and Engineering at IIIT Bhop
 - Built 15+ REST APIs with Node.js/Express, reducing response latency by 25%.  
 - Deployed on Vercel/Render/Railway achieving 99% uptime.  
 
-### Employee Management System (CLI in C)  
-**Technologies:** C, File I/O, Structs, Arrays  
-- Built a persistent CLI system to manage 500+ employee records with O(1) access time.  
-- Reduced manual record-keeping effort by 70% through automated operations.  
+### Rubik’s Cube Solver  
+**Technologies:** C++, Algorithms, Data Structures  
+- Developed an optimized solver for 3x3 Rubik’s Cube using efficient search algorithms.  
+- Implemented step-by-step solving logic reducing average solve time significantly.  
+- Applied graph search techniques and state-space optimization for faster computation.  
 
 ---
 
