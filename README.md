@@ -41,7 +41,17 @@ I am fascinated by how computer technology 🌐 has brought changes to our lives
 
 </p>
 
----
+<hr/>
+
+<h2 align="center">🐍 My Contributions 🐍</h2>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Shubhamsah27/Shubhamsah27/output/github-contribution-grid-snake.svg" />
+</div>
+
+<br/>
+
+<hr/>
 
 <h3 align="left">Languages and Tools:</h3>
 
@@ -80,13 +90,3 @@ I am fascinated by how computer technology 🌐 has brought changes to our lives
 <img src="https://img.icons8.com/?size=100&id=lU3pGcIShiCE&format=png&color=000000" height="40" />
 </a>
 </p>
-
-<hr/>
-
-<h2 align="center">🐍 My Contributions 🐍</h2>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Shubhamsah27/Shubhamsah27/output/github-contribution-grid-snake.svg" />
-</div>
-
-<br/>
