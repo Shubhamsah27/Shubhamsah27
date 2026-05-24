@@ -181,41 +181,109 @@ def add_action(path: List[Dict], x: float, y: float, t: float, action: str, extr
     path.append(item)
 
 
-def simulate_single_delivery_trip(start_time: float, wh: Tuple[float, float], delivery: Dict, zones: List[Dict]) -> Optional[Dict]:
-    target = (float(delivery["x"]), float(delivery["y"]))
-    weight = float(delivery["weight"])
-
+def simulate_trip(start_time: float, wh: Tuple[float, float], deliveries: List[Dict], zones: List[Dict]) -> Optional[Dict]:
     t = start_time
-    actions: List[Tuple[str, float]] = []
+    pos = wh
+    payload = sum(float(d["weight"]) for d in deliveries)
+    energy = 0.0
+    events: List[Dict] = []
 
-    wait1 = required_wait(wh, target, t, zones)
-    if wait1 > EPS:
-        t += wait1
-        actions.append(("WAIT_WH", t))
+    for d in deliveries:
+        target = (float(d["x"]), float(d["y"]))
+        wait = required_wait(pos, target, t, zones)
+        if wait > EPS:
+            t += wait
+            events.append({"action": "WAIT", "x": pos[0], "y": pos[1], "t": t})
 
-    d1 = dist(wh, target)
-    t_deliver = t + d1
+        leg = dist(pos, target)
+        energy += leg * (1.0 + payload)
+        t += leg
+        if t > float(d["deadline"]) + EPS:
+            return None
 
-    wait2 = required_wait(target, wh, t_deliver, zones)
-    t_after_wait = t_deliver
-    if wait2 > EPS:
-        t_after_wait += wait2
-        actions.append(("WAIT_TARGET", t_after_wait))
+        events.append(
+            {
+                "action": "DELIVER",
+                "x": target[0],
+                "y": target[1],
+                "t": t,
+                "delivery_id": d["id"],
+            }
+        )
+        payload -= float(d["weight"])
+        pos = target
 
-    d2 = dist(target, wh)
-    t_return = t_after_wait + d2
+    wait = required_wait(pos, wh, t, zones)
+    if wait > EPS:
+        t += wait
+        events.append({"action": "WAIT", "x": pos[0], "y": pos[1], "t": t})
 
-    energy = d1 * (1.0 + weight) + d2
+    leg = dist(pos, wh)
+    energy += leg * (1.0 + payload)
+    t += leg
     if energy > 500.0 + EPS:
         return None
 
-    return {
-        "deliver_time": t_deliver,
-        "return_time": t_return,
-        "energy": energy,
-        "wait_wh": wait1,
-        "wait_target": wait2,
-    }
+    events.append({"action": "RETURN", "x": wh[0], "y": wh[1], "t": t})
+    return {"events": events, "return_time": t, "energy": energy}
+
+
+def nearest_order(wh: Tuple[float, float], deliveries: List[Dict]) -> List[Dict]:
+    unused = deliveries[:]
+    order: List[Dict] = []
+    cur = wh
+    while unused:
+        best_idx = min(
+            range(len(unused)),
+            key=lambda i: (dist(cur, (float(unused[i]["x"]), float(unused[i]["y"]))), float(unused[i]["deadline"])),
+        )
+        nxt = unused.pop(best_idx)
+        order.append(nxt)
+        cur = (float(nxt["x"]), float(nxt["y"]))
+    return order
+
+
+def plan_best_trip(start_time: float, wh: Tuple[float, float], max_payload: float, pending: List[Dict], zones: List[Dict]) -> Optional[Dict]:
+    if not pending:
+        return None
+
+    candidates = sorted(
+        pending,
+        key=lambda d: (float(d["deadline"]), dist(wh, (float(d["x"]), float(d["y"])))),
+    )
+
+    selected: List[Dict] = []
+    total_w = 0.0
+    for d in candidates:
+        w = float(d["weight"])
+        if total_w + w <= max_payload + EPS:
+            selected.append(d)
+            total_w += w
+    if not selected:
+        return None
+
+    while selected:
+        orders: List[List[Dict]] = []
+        deadline_order = sorted(selected, key=lambda d: float(d["deadline"]))
+        orders.append(deadline_order)
+        nn_order = nearest_order(wh, selected)
+        if [x["id"] for x in nn_order] != [x["id"] for x in deadline_order]:
+            orders.append(nn_order)
+
+        best = None
+        for order in orders:
+            sim = simulate_trip(start_time, wh, order, zones)
+            if sim is None:
+                continue
+            score = (-len(order), sim["return_time"], sim["energy"])
+            if best is None or score < best[0]:
+                best = (score, order, sim)
+        if best is not None:
+            _, order, sim = best
+            return {"deliveries": order, "sim": sim}
+
+        selected = sorted(selected, key=lambda d: float(d["deadline"]))[:-1]
+    return None
 
 
 def solve(data: Dict) -> Dict:
@@ -228,54 +296,55 @@ def solve(data: Dict) -> Dict:
         for d in data.get("drones", [])
     ]
 
-    deliveries = sorted(data.get("deliveries", []), key=lambda d: float(d["deadline"]))
+    pending = {d["id"]: d for d in data.get("deliveries", [])}
 
-    for delivery in deliveries:
-        weight = float(delivery["weight"])
-        deadline = float(delivery["deadline"])
-
-        best = None
-        for i, drone in enumerate(drones):
-            if weight > drone.max_payload + EPS:
+    progress = True
+    while progress and pending:
+        progress = False
+        for drone in sorted(drones, key=lambda x: x.available_time):
+            plan = plan_best_trip(
+                start_time=drone.available_time,
+                wh=warehouse,
+                max_payload=drone.max_payload,
+                pending=list(pending.values()),
+                zones=zones,
+            )
+            if plan is None:
                 continue
-            sim = simulate_single_delivery_trip(drone.available_time, warehouse, delivery, zones)
-            if sim is None:
+
+            chosen = plan["deliveries"]
+            sim = plan["sim"]
+            if not chosen:
                 continue
-            if sim["deliver_time"] > deadline + EPS:
-                continue
 
-            candidate = (sim["return_time"], sim["deliver_time"], i, sim)
-            if best is None or candidate < best:
-                best = candidate
+            add_action(
+                drone.path,
+                warehouse[0],
+                warehouse[1],
+                drone.available_time,
+                "PICKUP",
+                {"delivery_ids": [d["id"] for d in chosen]},
+            )
 
-        if best is None:
-            continue
+            for ev in sim["events"]:
+                if ev["action"] == "WAIT":
+                    add_action(drone.path, ev["x"], ev["y"], ev["t"], "WAIT")
+                elif ev["action"] == "DELIVER":
+                    add_action(
+                        drone.path,
+                        ev["x"],
+                        ev["y"],
+                        ev["t"],
+                        "DELIVER",
+                        {"delivery_id": ev["delivery_id"]},
+                    )
+                elif ev["action"] == "RETURN":
+                    add_action(drone.path, ev["x"], ev["y"], ev["t"], "RETURN")
 
-        _, _, idx, sim = best
-        drone = drones[idx]
-        start_t = drone.available_time
-        target = (float(delivery["x"]), float(delivery["y"]))
-
-        add_action(
-            drone.path,
-            warehouse[0],
-            warehouse[1],
-            start_t,
-            "PICKUP",
-            {"delivery_ids": [delivery["id"]]},
-        )
-
-        if sim["wait_wh"] > EPS:
-            add_action(drone.path, warehouse[0], warehouse[1], start_t + sim["wait_wh"], "WAIT")
-
-        add_action(drone.path, target[0], target[1], sim["deliver_time"], "DELIVER", {"delivery_id": delivery["id"]})
-
-        if sim["wait_target"] > EPS:
-            add_action(drone.path, target[0], target[1], sim["deliver_time"] + sim["wait_target"], "WAIT")
-
-        add_action(drone.path, warehouse[0], warehouse[1], sim["return_time"], "RETURN")
-
-        drone.available_time = sim["return_time"]
+            drone.available_time = sim["return_time"]
+            for d in chosen:
+                pending.pop(d["id"], None)
+            progress = True
 
     manifest = []
     for drone in drones:
