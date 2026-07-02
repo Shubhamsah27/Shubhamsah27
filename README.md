@@ -8,6 +8,10 @@
 </div>
 
 <div align="center">
+  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/c288471c-be67-4fbb-af44-1c63ee9ed280" width="100%" />
+</div>
+
+<div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Passionate+Programmer+from+India;Building+Cool+Stuff+%F0%9F%9A%80;Exploring+New+Tech+Stacks;C%2B%2B+%7C+Python+%7C+NodeJS" alt="Typing SVG" />
 </div>
 
