@@ -28,7 +28,7 @@
       </ul>
     </td>
     <td width="40%" align="center">
-      <img src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="300" />
+      <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/f5d2d866-d25c-4873-8d82-425d2c62fc2e" width="300" />
     </td>
   </tr>
 </table>
@@ -37,9 +37,9 @@
 
 <h2 align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="30" height="30" /> Let's Connect</h2>
 <p align="center">
-  <a href="https://www.linkedin.com/in/shubham-sah-002a2a28b/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://www.instagram.com/its_shubham__sah/" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-  <a href="https://www.facebook.com/shubham.sah.56232" target="_blank"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
+  <a href="https://www.linkedin.com/in/shubham-sah-002a2a28b/" target="_blank"><img src="https://user-images.githubusercontent.com/74038190/235294012-0a55e343-37ad-4b0f-924f-c8431d9d2483.gif" width="45" alt="LinkedIn" /></a>
+  <a href="https://www.instagram.com/its_shubham__sah/" target="_blank"><img src="https://user-images.githubusercontent.com/74038190/235294013-a33e5c43-a01c-43f6-b44d-a406d8b4ab75.gif" width="45" alt="Instagram" /></a>
+  <a href="https://www.facebook.com/shubham.sah.56232" target="_blank"><img src="https://user-images.githubusercontent.com/74038190/235294010-ec412ef5-e3da-4efa-b1d4-0ab4d4638755.gif" width="45" alt="Facebook" /></a>
   <a href="https://codeforces.com/profile/_shubham__sah" target="_blank"><img src="https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" alt="Codeforces" /></a>
   <a href="https://www.codechef.com/users/fair_truce_14" target="_blank"><img src="https://img.shields.io/badge/CodeChef-5B4638?style=for-the-badge&logo=codechef&logoColor=white" alt="CodeChef" /></a>
 </p>
@@ -76,6 +76,10 @@
   <img src="https://raw.githubusercontent.com/Shubhamsah27/Shubhamsah27/output/github-contribution-grid-snake.svg" />
 </div>
 
+<div align="center">
+<br>
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="500" />
+</div>
 <br>
 
 <div align="center">
