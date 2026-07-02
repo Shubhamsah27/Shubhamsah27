@@ -28,7 +28,7 @@
       </ul>
     </td>
     <td width="40%" align="center">
-      <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/f5d2d866-d25c-4873-8d82-425d2c62fc2e" width="300" />
+      <img src="https://user-images.githubusercontent.com/74038190/212750680-266fa8aa-39f1-4e8b-8873-7181dbaf3d7c.gif" width="300" />
     </td>
   </tr>
 </table>
@@ -47,18 +47,20 @@
 <br>
 
 <h2 align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Toolbox.png" width="30" height="30" /> Languages & Tools</h2>
-<p align="center">
-  <b>Programming Languages</b><br>
-  <img src="https://skillicons.dev/icons?i=c,cpp,python,sql" /><br><br>
-  <b>Backend & Core</b><br>
-  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb" /><br><br>
-  <b>Frontend</b><br>
-  <img src="https://skillicons.dev/icons?i=react,tailwind,js" /><br><br>
-  <b>AI/ML & Tools</b><br>
-  <img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,opencv" /><br><br>
-  <b>Developer Tools</b><br>
-  <img src="https://skillicons.dev/icons?i=git,github,vscode,linux" />
-</p>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width="70" alt="JS" />
+  <img src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385dfa7ed2.gif" width="70" alt="Python" />
+  <img src="https://user-images.githubusercontent.com/74038190/212257465-7ce8d493-cac5-494e-982a-5a9deb852c4b.gif" width="70" alt="GitHub" />
+  <img src="https://user-images.githubusercontent.com/74038190/212257463-4d082cb4-7483-4eaf-bc25-6dde2628aabd.gif" width="70" alt="VSCode" />
+  <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="70" alt="Node" />
+  <img src="https://user-images.githubusercontent.com/74038190/212257472-08e52665-c503-4bd9-aa20-f5a4dae769b5.gif" width="70" alt="React" />
+  <img src="https://user-images.githubusercontent.com/74038190/212281775-b468df30-4edc-4bf8-a4ee-f52e1aaddc86.gif" width="70" alt="Express" />
+  <img src="https://user-images.githubusercontent.com/74038190/212281780-0afd9616-8310-46e9-a898-c4f5269f1387.gif" width="70" alt="HTML" />
+  <img src="https://user-images.githubusercontent.com/74038190/212281763-e6ecd7ef-c4aa-45b6-a97c-f33f6bb592bd.gif" width="70" alt="Git" />
+  <br><br>
+  <b>Other Tech & Databases</b><br>
+  <img src="https://skillicons.dev/icons?i=cpp,c,sql,mongodb,tailwind,linux,pytorch,tensorflow,opencv" />
+</div>
 
 <br>
 
