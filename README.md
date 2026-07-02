@@ -1,47 +1,74 @@
-<!-- Indian Flag GIF -->
-<img align="left" src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" width="10%">
-<img align="right" src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" width="10%">
+<!-- Header Section with Animated Gradient Banner -->
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hi%20%F0%9F%91%8B,%20I'm%20Shubham%20Sah&fontSize=50&animation=fadeIn&fontAlignY=38" width="100%" />
+</div>
 
-<h1 align="center">Hi 👋, I'm Shubham Sah</h1>
-<h3 align="center">A passionate Programmer from India</h3>
-
-<p align="center">
-I am fascinated by how computer technology 🌐 has brought changes to our lives that could never have been predicted; witnessing the expansion of computer science allowed me to consider studying software engineering from an early age, and my enthusiasm has perpetually developed since this time. And also I love exploring new tech stack 💻 and leveraging them to build cool stuffs 🛠️
-</p>
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Passionate+Programmer+from+India;Building+Cool+Stuff+%F0%9F%9A%80;Exploring+New+Tech+Stacks;C%2B%2B+%7C+Python+%7C+NodeJS" alt="Typing SVG" />
+</div>
 
 <p align="center"> 
  <img src="https://komarev.com/ghpvc/?username=shubhamsah27&label=Profile%20views&color=0e75b6&style=flat" /> 
 </p>
 
-<img align="right" width="400" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif">
+<br>
 
-<br><br>
-
-- 🔭 I’m currently open to a new Job  
-- 💬 Ask me about **C++, Python, NodeJS**  
-- 📫 How to reach me **shubhamsah869@gmail.com**  
-- ⚡ Fun fact **I think I'm funny**
+<table width="100%">
+  <tr>
+    <td width="60%">
+      <h2 align="left"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Alien%20Monster.png" width="30" height="30" /> About Me</h2>
+      <p align="left">
+        I am fascinated by how computer technology 🌐 has brought changes to our lives that could never have been predicted. Witnessing the expansion of computer science allowed me to consider studying software engineering from an early age, and my enthusiasm has perpetually developed since this time. I love exploring new tech stacks 💻 and leveraging them to build cool stuffs 🛠️
+      </p>
+      <ul align="left">
+        <li><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Telescope.png" width="20" height="20" /> <b>I’m currently open to a new Job</b></li>
+        <li><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Thought%20Balloon.png" width="20" height="20" /> <b>Ask me about:</b> C++, Python, NodeJS</li>
+        <li><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Postbox.png" width="20" height="20" /> <b>How to reach me:</b> shubhamsah869@gmail.com</li>
+        <li><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/High%20Voltage.png" width="20" height="20" /> <b>Fun fact:</b> I think I'm funny</li>
+      </ul>
+    </td>
+    <td width="40%" align="center">
+      <img src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="300" />
+    </td>
+  </tr>
+</table>
 
 <br>
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-
-<a href="https://www.linkedin.com/in/shubham-sah-002a2a28b/" target="blank">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" height="30" />
-</a>
-
-<a href="https://www.instagram.com/its_shubham__sah/" target="blank">
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" height="30" />
-</a>
-
-<a href="https://www.facebook.com/shubham.sah.56232" target="blank">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" height="30" />
-</a>
-
+<h2 align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="30" height="30" /> Let's Connect</h2>
+<p align="center">
+  <a href="https://www.linkedin.com/in/shubham-sah-002a2a28b/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://www.instagram.com/its_shubham__sah/" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
+  <a href="https://www.facebook.com/shubham.sah.56232" target="_blank"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
+  <a href="https://codeforces.com/profile/_shubham__sah" target="_blank"><img src="https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" alt="Codeforces" /></a>
+  <a href="https://www.codechef.com/users/fair_truce_14" target="_blank"><img src="https://img.shields.io/badge/CodeChef-5B4638?style=for-the-badge&logo=codechef&logoColor=white" alt="CodeChef" /></a>
 </p>
 
-<hr/>
+<br>
+
+<h2 align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Toolbox.png" width="30" height="30" /> Languages & Tools</h2>
+<p align="center">
+  <b>Programming Languages</b><br>
+  <img src="https://skillicons.dev/icons?i=c,cpp,python,sql" /><br><br>
+  <b>Backend & Core</b><br>
+  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb" /><br><br>
+  <b>Frontend</b><br>
+  <img src="https://skillicons.dev/icons?i=react,tailwind,js" /><br><br>
+  <b>AI/ML & Tools</b><br>
+  <img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,opencv" /><br><br>
+  <b>Developer Tools</b><br>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,linux" />
+</p>
+
+<br>
+
+<h2 align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" width="30" height="30" /> GitHub Stats</h2>
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Shubhamsah27&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shubhamsah27&theme=tokyonight&hide_border=true&background=0D1117" />
+</div>
+
+<br>
 
 <h2 align="center">🐍 My Contributions 🐍</h2>
 
@@ -49,44 +76,8 @@ I am fascinated by how computer technology 🌐 has brought changes to our lives
   <img src="https://raw.githubusercontent.com/Shubhamsah27/Shubhamsah27/output/github-contribution-grid-snake.svg" />
 </div>
 
-<br/>
+<br>
 
-<hr/>
-
-<h3 align="left">Languages and Tools:</h3>
-
-<b>Programming Languages</b>
-<p>
-<img src="https://skillicons.dev/icons?i=c,cpp,python,sql" />
-</p>
-
-<b>Backend & Core</b>
-<p>
-<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb" />
-</p>
-
-<b>Frontend</b>
-<p>
-<img src="https://skillicons.dev/icons?i=react,tailwind,js" />
-</p>
-
-<b>AI/ML & Tools</b>
-<p>
-<img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,opencv" />
-</p>
-
-<b>Developer Tools</b>
-<p>
-<img src="https://skillicons.dev/icons?i=git,github,vscode,linux" />
-</p>
-
-<b>Competitive Programming</b>
-<p>
-<a href="https://codeforces.com/profile/_shubham__sah" target="blank">
-<img src="https://img.icons8.com/?size=100&id=jldAN67IAsrW&format=png&color=000000" height="40" />
-</a>
-
-<a href="https://www.codechef.com/users/fair_truce_14" target="blank">
-<img src="https://img.icons8.com/?size=100&id=lU3pGcIShiCE&format=png&color=000000" height="40" />
-</a>
-</p>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="50" height="50" />
+</div>
